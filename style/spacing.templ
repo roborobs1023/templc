@@ -1,0 +1,75 @@
+package style
+
+import "github.com/roborobs1023/templc/internal/utils"
+
+css Padding(val string) {
+	padding: { utils.ConvertPxToRem(val) };
+}
+
+css PaddingX(val string) {
+	padding-inline: { utils.ConvertPxToRem(val) };
+}
+
+css PaddingY(val string) {
+	padding-block: { utils.ConvertPxToRem(val) };
+}
+
+css PaddingStart(val string) {
+	padding-inline-start: { utils.ConvertPxToRem(val) };
+}
+
+css PaddingEnd(val string) {
+	padding-inline-end: { utils.ConvertPxToRem(val) };
+}
+
+css PaddingTop(val string) {
+	padding-top: { val };
+}
+
+css PaddingLeft(val string) {
+	padding-left: { val };
+}
+
+css PaddingBottom(val string) {
+	padding-bottom: { val };
+}
+
+css PaddingRight(val string) {
+	padding-right: { val };
+}
+
+css Margin(val string) {
+	margin: { utils.ConvertPxToRem(val) };
+}
+
+css MarginX(val string) {
+	margin-inline: { utils.ConvertPxToRem(val) };
+}
+
+css MarginY(val string) {
+	margin-block: { utils.ConvertPxToRem(val) };
+}
+
+css MarginStart(val string) {
+	margin-inline-start: { utils.ConvertPxToRem(val) };
+}
+
+css MarginEnd(val string) {
+	margin-inline-end: { utils.ConvertPxToRem(val) };
+}
+
+css MarginTop(val string) {
+	margin-top: { val };
+}
+
+css MarginLeft(val string) {
+	margin-left: { val };
+}
+
+css MarginBottom(val string) {
+	margin-bottom: { val };
+}
+
+css MarginRight(val string) {
+	margin-right: { val };
+}

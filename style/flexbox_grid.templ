@@ -1,0 +1,274 @@
+package style
+
+import (
+	"fmt"
+	"github.com/roborobs1023/templc/internal/utils"
+)
+
+css Flex() {
+	display: flex;
+}
+
+css Flex1() {
+	flex: 1 1 0%;
+}
+
+css FlexAuto() {
+	flex: 1 1 auto;
+}
+
+css FlexInitial() {
+	flex: 0 1 auto;
+}
+
+css FlexNone() {
+	flex: none;
+}
+
+css FlexWrap() {
+	flex-wrap: wrap;
+}
+
+css FlexNoWrap() {
+	flex-wrap: nowrap;
+}
+
+css FlexWrap_Reverse() {
+	flex-wrap: wrap-reverse;
+}
+
+css Grow() {
+	flex-grow: 1;
+}
+
+css Grow0() {
+	flex-grow: 0;
+}
+
+css Shrink() {
+	flex-shrink: 1;
+}
+
+css Shrink0() {
+	flex-shrink: 0;
+}
+
+css Gap_0() {
+	gap: 0px;
+}
+
+css GapX_0() {
+	column-gap: 0;
+}
+
+css GapY_0() {
+	row-gap: 0;
+}
+
+css Gap(val string) {
+	gap: { utils.ConvertPxToRem(val) };
+}
+
+css GapX(val string) {
+	column-gap: { utils.ConvertPxToRem(val) };
+}
+
+css GapY(val string) {
+	row-gap: { utils.ConvertPxToRem(val) };
+}
+
+css FlexCol() {
+	flex-direction: column;
+}
+
+css FlexCol_Reverse() {
+	flex-direction: column-reverse;
+}
+
+css FlexRow() {
+	flex-direction: row;
+}
+
+css FlexRow_Reverse() {
+	flex-direction: row-reverse;
+}
+
+css FlexBasis(val string) {
+	flex-basis: { val };
+}
+
+css Order(val int) {
+	order: { utils.ConvertToString(val) };
+}
+
+css OrderFirst() {
+	order: -9999;
+}
+
+css OrderLast() {
+	order: 9999;
+}
+
+css OrderNone() {
+	order: 0;
+}
+
+css GridCols[T any](val T) {
+	grid-template-columns: { utils.GenerateGridTempalate(val) };
+}
+
+css GridCols_None() {
+	grid-template-columns: none;
+}
+
+css GridCols_Subgrid() {
+	grid-template-columns: subgrid;
+}
+
+css Col_Auto() {
+	grid-column: auto;
+}
+
+css Col_Span(start, stop int) {
+	grid-column: { fmt.Sprintf("span %v / span %v", start, stop) };
+}
+
+css Col_Start(start int) {
+	grid-column-start: { fmt.Sprint(start) };
+}
+
+css Col_Span_Full() {
+	grid-column: 1 / -1;
+}
+
+css Col_End(end int) {
+	grid-column-end: { fmt.Sprint(end) };
+}
+
+css GridRows[T any](val T) {
+	grid-template-rows: { utils.GenerateGridTempalate(val) };
+}
+
+css GridRows_None() {
+	grid-template-rows: none;
+}
+
+css GridRows_Subgrid() {
+	grid-template-rows: subgrid;
+}
+
+css Row_Auto() {
+	grid-row: auto;
+}
+
+css Row_Span(start, stop int) {
+	grid-row: { fmt.Sprintf("span %v / span %v", start, stop) };
+}
+
+css Row_Start(start int) {
+	grid-row-start: { fmt.Sprint(start) };
+}
+
+css Row_End(end int) {
+	grid-row-end: { fmt.Sprint(end) };
+}
+
+css Row_Span_Full() {
+	grid-row: 1 / -1;
+}
+
+css GridFlow_Row() {
+	grid-auto-flow: row;
+}
+
+css GridFlow_Col() {
+	grid-auto-flow: column;
+}
+
+css GridFlow_Dense() {
+	grid-auto-flow: dense;
+}
+
+css GridFlow_Row_Dense() {
+	grid-auto-flow: row dense;
+}
+
+css GridFlow_Col_Dense() {
+	grid-auto-flow: column dense;
+}
+
+css Auto_Cols_Auto() {
+	grid-auto-columns: auto;
+}
+
+css Auto_Cols_Min() {
+	grid-auto-columns: min-content;
+}
+
+css Auto_Cols_Max() {
+	grid-auto-columns: max-content;
+}
+
+css Auto_Cols_FR() {
+	grid-auto-columns: minmax(0, 1fr);
+}
+
+css Auto_Cols(val string) {
+	grid-auto-rows: { val };
+}
+
+css Auto_Rows_Auto() {
+	grid-auto-rows: auto;
+}
+
+css Auto_Rows_Min() {
+	grid-auto-rows: min-content;
+}
+
+css Auto_Rows_Max() {
+	grid-auto-rows: max-content;
+}
+
+css Auto_Rows_FR() {
+	grid-auto-rows: minmax(0, 1fr);
+}
+
+css Auto_Rows(val string) {
+	grid-auto-rows: { val };
+}
+
+css JustifyContent(val string) {
+	justify-content: { val };
+}
+
+css JustifyItems(val string) {
+	justify-items: { val };
+}
+
+css JustifySelf(val string) {
+	justify-self: { val };
+}
+
+css AlignContent(val string) {
+	align-content: { val };
+}
+
+css AlignItems(val string) {
+	align-items: { val };
+}
+
+css AlignSelf(val string) {
+	align-self: { val };
+}
+
+css PlaceContent(val string) {
+	place-content: { val };
+}
+
+css PlaceItems(val string) {
+	place-items: { val };
+}
+
+css PlaceSelf(val string) {
+	place-self: { val };
+}

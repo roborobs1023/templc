@@ -1,0 +1,269 @@
+package style
+
+import (
+	"fmt"
+	"github.com/roborobs1023/templc/internal/utils"
+	"strconv"
+)
+
+css Aspect_auto() {
+	aspect-ratio: auto;
+}
+
+css Aspect_square() {
+	aspect-ratio: 1 / 1;
+}
+
+css Aspect_video() {
+	aspect-ratio: 16 / 9;
+}
+
+css Aspect_Custom(width, height int) {
+	aspect-ratio: { aspectRatio(width, height) };
+}
+
+func aspectRatio(w, h int) string {
+	return fmt.Sprintf("%v / %v", w, h)
+}
+
+css Columns(c int) {
+	columns: { strconv.Itoa(c) };
+}
+
+css Columns_auto() {
+	columns: auto;
+}
+
+css Columns_3xs() {
+	columns: 16rem;
+}
+
+css Columns_2xs() {
+	columns: 18rem;
+}
+
+css Columns_xs() {
+	columns: 20rem;
+}
+
+css Columns_sm() {
+	columns: 24rem;
+}
+
+css Columns_md() {
+	columns: 28rem;
+}
+
+css Columns_lg() {
+	columns: 32rem;
+}
+
+css Columns_xl() {
+	columns: 36rem;
+}
+
+css Columns_2xl() {
+	columns: 42rem;
+}
+
+css Columns_3xl() {
+	columns: 48rem;
+}
+
+css Columns_4xl() {
+	columns: 56rem;
+}
+
+css Columns_5xl() {
+	columns: 64rem;
+}
+
+css Columns_6xl() {
+	columns: 72rem;
+}
+
+css Columns_7xl() {
+	columns: 80rem;
+}
+
+css Break_after(val string) {
+	break-after: { val };
+}
+
+css Break_before(val string) {
+	break-before: { val };
+}
+
+css Break_inside(val string) {
+	break-inside: { val };
+}
+
+css Box_Decoration(val string) {
+	box-decoration-break: { val };
+}
+
+css Box_Border() {
+	box-sizing: border-box;
+}
+
+css Box_Content() {
+	box-sizing: content-box;
+}
+
+css Display(val string) {
+	display: { val };
+}
+
+css Float(val string) {
+	float: { val };
+}
+
+css Clear(val string) {
+	clear: { val };
+}
+
+css Isolation(val string) {
+	isolation: { val };
+}
+
+css ObjectFit(val string) {
+	object-fit: { val };
+}
+
+css ObjectPosition(val string) {
+	object-position: { val };
+}
+
+css Overflow(val string) {
+	overflow: { val };
+}
+
+css OverflowX(val string) {
+	overflow-x: { val };
+}
+
+css OverflowY(val string) {
+	overflow-y: { val };
+}
+
+css Overscroll(val string) {
+	overscroll: { val };
+}
+
+css OverscrollX(val string) {
+	overscroll-x: { val };
+}
+
+css OverscrollY(val string) {
+	overflow-y: { val };
+}
+
+css Position(val string) {
+	position: { val };
+}
+
+css Inset_0() {
+	inset: 0;
+}
+
+css InsetX_0() {
+	left: 0;
+	right: 0;
+}
+
+css InsetY_0() {
+	top: 0;
+	bottom: 0;
+}
+
+css Start_0() {
+	inset-inline-start: 0;
+}
+
+css End_0() {
+	inset-inline-end: 0;
+}
+
+css Top_0() {
+	top: 0;
+}
+
+css Right_0() {
+	right: 0;
+}
+
+css Bottom_0() {
+	bottom: 0;
+}
+
+css Top(val string) {
+	top: { utils.ConvertPxToRem(val) };
+}
+
+css Right(val string) {
+	right: { utils.ConvertPxToRem(val) };
+}
+
+css Bottom(val string) {
+	bottom: { utils.ConvertPxToRem(val) };
+}
+
+css Left(val string) {
+	left: { utils.ConvertPxToRem(val) };
+}
+
+css TopPercent(val float64) {
+	top: { utils.CheckPercentage(val) };
+}
+
+css RightPercent(val float64) {
+	right: { utils.CheckPercentage(val) };
+}
+
+css BottomPercent(val float64) {
+	bottom: { utils.CheckPercentage(val) };
+}
+
+css LeftPercent(val float64) {
+	left: { utils.CheckPercentage(val) };
+}
+
+css Top_Auto() {
+	top: auto;
+}
+
+css Bottom_Auto() {
+	bottom: auto;
+}
+
+css Left_Auto() {
+	left: auto;
+}
+
+css Right_Auto() {
+	right: auto;
+}
+
+css Top_Full() {
+	top: 100%;
+}
+
+css Bottom_Full() {
+	bottom: 100%;
+}
+
+css Left_Full() {
+	left: 100%;
+}
+
+css Right_Full() {
+	right: 100%;
+}
+
+css Visibility(val string) {
+	visibility: { val };
+}
+
+css Z_Index(val int) {
+	z-index: { fmt.Sprintf("%v", val) };
+}
